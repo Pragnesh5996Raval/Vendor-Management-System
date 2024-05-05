@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "d59e3d1b-df66-46b8-ba94-5b1c35bca428",
+		"name": "Vendor Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34673816"
+	},
+	"item": [
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "Get Vendor List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/vendors/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Vendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ajay Rathod\",\r\n    \"contact_details\":\"+918234567133\",\r\n    \"address\":\"Malgodaun, Rajkot-384012\",\r\n    \"vendor_code\":\"Rathod82\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/vendors/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vendor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/vendors/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ajay Rathod\",\r\n    \"contact_details\":\"+918234567133\",\r\n    \"address\":\"Rajkot, Gujarat\",\r\n    \"vendor_code\":\"Rathod82\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/vendors/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Specific Vendor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/vendors/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Vendor Performance Metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/vendors/1/performance/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase_Order",
+			"item": [
+				{
+					"name": "Create Purchase Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"po_number\":\"PO009\",\r\n    \"order_date\":\"2024-05-10\",\r\n    \"delivery_date\":\"2024-05-28\",\r\n    \"items\":\"['Item 18', 'Item 19', 'Item 20']\",\r\n    \"quantity\":50,\r\n    \"status\":\"completed\",\r\n    \"quality_rating\":3.5,\r\n    \"issue_date\": \"2024-05-15\",\r\n    \"vendor\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/purchase_orders/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Of Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/purchase_orders/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Purchase Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"po_number\":\"PO009\",\r\n    \"order_date\":\"2024-05-10\",\r\n    \"delivery_date\":\"2024-05-28\",\r\n    \"items\":\"['Item 18', 'Item 19', 'Item 20']\",\r\n    \"quantity\":50,\r\n    \"status\":\"pending\",\r\n    \"quality_rating\":3.5,\r\n    \"issue_date\": \"2024-05-05T10:25:48.276498Z\",\r\n    \"vendor\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/purchase_orders/7/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Purchase Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/purchase_orders/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrive Specific Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/purchase_orders/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "Order Acknowledge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"acknowledgment_date\": \"2024-05-12T08:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/purchase_orders/8/acknowledge/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
